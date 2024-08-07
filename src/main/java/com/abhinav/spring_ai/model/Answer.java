@@ -1,15 +1,4 @@
 package com.abhinav.spring_ai.model;
 
-public class Answer {
-	
-	private String response;
-
-	public String getResponse() {
-		return response;
-	}
-
-	public void setResponse(String response) {
-		this.response = response;
-	}
-
+public record Answer(String answer) {
 }
