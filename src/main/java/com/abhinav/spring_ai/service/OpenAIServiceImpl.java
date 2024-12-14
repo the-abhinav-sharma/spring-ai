@@ -32,7 +32,7 @@ public class OpenAIServiceImpl implements OpenAIService {
 		ChatResponse response = chatClient.call(prompt);
 		Instant after = Instant.now();
 		System.out.println("Response received at "+new Date());
-		System.out.println("Time taken: "+Duration.between(before, after).toMillis()+" milliseconds");
+		System.out.println("Time taken: "+Duration.between(before, after).toSeconds()+" seconds");
 		System.out.println("*************************************************");
 		return new Answer(response.getResult().getOutput().getContent());
 	}
